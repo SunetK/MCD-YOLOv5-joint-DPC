@@ -9,11 +9,11 @@ Clone repo and install [requirements.txt](https://github.com/SunetK/MCD-YOLOv5-j
 ### Train On Custom Data
 Creating a custom model to detect your objects is an iterative process of collecting and organizing images, labeling your objects of interest, training a model, deploying it into the wild to make predictions, and then using that deployed model to collect examples of edge cases to repeat and improve.
 #### 1. Create Dataset
-YOLOv5 models must be trained on labelled data in order to learn classes of objects in that data. 
+MCD-YOLOv5 must be trained on labelled data in order to learn classes of objects in that data. 
 ##### 1.1 Collect Images
-YOLOv5 models will learn by example. You can use `Image.py` to get examples from the FITS files.
+MCD-YOLOv5 models will learn by example of molecular clumps. You can use `Image.py` to get examples from the FITS files.
 ##### 1.2 Create Labels
-Once you have collected images, you will need to annotate the objects of interest to create a ground truth for your model to learn from.
+Once you have collected examples of molecular clumps, you will need to annotate the objects of interest to create a ground truth for MCD-YOLOv5 to learn from. You can use `Xml.py` to get annotations from the clump parameter table.
 ##### 1.3 Prepare Dataset for YOLOv5
 #### 2. Select a Model
 #### 3. Train
