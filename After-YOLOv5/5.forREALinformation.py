@@ -16,7 +16,6 @@ def main():
     aa.sort(key=lambda x:int(x.split('.')[0].split('_')[-2]))
     abc = 0
     kernel = np.ones((3, 3), np.uint8)
-
     zs = len(aa) * 7
     cxx = []
     cyy = []
@@ -31,7 +30,6 @@ def main():
         erosion_dilate_img = cv2.dilate(erosion_img, kernel)
         erosion_dilate_img_gray = cv2.cvtColor(erosion_dilate_img, cv2.COLOR_BGR2GRAY)
         ret, thresh = cv2.threshold(erosion_dilate_img_gray, 0, 255, cv2.THRESH_OTSU + cv2.THRESH_BINARY)
-
         contours, hierarchy = cv2.findContours(thresh, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_NONE)
         x1 = []
         y1 = []
@@ -65,7 +63,6 @@ def main():
             f2.write("%s %s %s %s %s\n" % (str(czz[abc - 1]), str(x11[abc - 1]), str(y11[abc - 1]), str(x22[abc - 1]), str(y22[abc - 1])))
     f1.close()
     f2.close()
-
 
 if __name__ == '__main__':
     main()
