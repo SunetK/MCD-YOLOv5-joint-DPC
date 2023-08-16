@@ -12,7 +12,6 @@ for line in open(txtfile_path):
     b0 = float(a[0])
     b1 = float(a[1])
     b2 = a[2].split('\n')[0]
-
     example.append(b0)
     example.append(b1)
     example.append(b2)
