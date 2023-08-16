@@ -20,3 +20,8 @@ Once you have collected examples and created labels, you should put them in the 
 You can use `train.py` to train the MCD-YOLOv5 on your data.
 #### 3. Detect
 Once the training is over, you can use the `detect.py` to detect the new examples.
+## After-YOLOv5
+After the detection of MCD-YOLOv5, you should put the results into the `After-YOLOv5` to get the input of DPC. You just need run the grogram in turn and put the new examples, the detection results, and FITS files in Specified folders, you can realize it.
+## DPC
+You can get the results of the DPC by using `mainDensityClust.mat`.
+Finally, you should save the clustering results in txt text and use `Result.py` to get the clump-detection results.
