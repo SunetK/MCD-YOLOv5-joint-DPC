@@ -6,7 +6,6 @@ path = 'Real_decetion/G100/3D_0099.csv'
 data = pd.read_csv(path)
 intensity = r'FITS/synthetic_model_0099.fits'
 intensity_data = fits.getdata(intensity)
-
 cen = []
 
 Cen_X = list(data['XX'])
