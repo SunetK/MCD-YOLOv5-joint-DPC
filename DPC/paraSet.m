@@ -3,8 +3,7 @@ function [dc, rho] = paraSet(dist, percNeigh, kernel, dc)
     distRow = squareform(dist, 'tovector');
     sortDistRow = sort(distRow);
     [NE, ~] = size(dist);
-%     dc = sortDistRow(round((NE*(NE-1)/2)*percNeigh));
-    
+ 
     if strcmp(kernel, 'Gauss')
         rho = sum(exp(-(dist/dc).^2) , 1) - exp(-(0/dc).^2); % local density estimation using Guass Kernel
     elseif strcmp(kernel, 'Cut-off')
