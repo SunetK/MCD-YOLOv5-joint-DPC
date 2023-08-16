@@ -3,7 +3,7 @@ The detection and analysis of molecular clumps can lead to a better understandin
 ## MCD-YOLOv5
 To enhance the ability of YOLOv5 in detecting small molecular clumps, we introduce Coordinate Attention (CA) module and Normalized Wasserstein Distance (NWD) loss function to YOLOv5. See the [YOLOv5 Docs](https://docs.ultralytics.com/yolov5) for full documentation on training, testing and deployment. 
 ### Install
-Clone repo and install [requirements.txt]([https://github.com/ultralytics/yolov5/blob/master/requirements.txt](https://github.com/SunetK/MCD-YOLOv5-joint-DPC/blob/main/MCD-YOLOv5/requirements.txt)) in a
+Clone repo and install [requirements.txt](https://github.com/SunetK/MCD-YOLOv5-joint-DPC/blob/main/MCD-YOLOv5/requirements.txt) in a
 [**Python>=3.7.0**](https://www.python.org/) environment, including
 [**PyTorch>=1.7**](https://pytorch.org/get-started/locally/).
 ### Train On Custom Data
