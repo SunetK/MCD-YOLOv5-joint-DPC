@@ -12,15 +12,12 @@ with open(txtfile1_path) as fp1:
             del example[:]
             a = line1.split('\t')
             b = line2.split('\n')[0].split(' ')
-
             c1 = int(a[1]) + int(b[1])
             c2 = int(a[2]) + int(b[2])
             c3 = a[0].split('.txt')[0]
-
             example.append(c3)
             example.append(c1)
             example.append(c2)
-
 
             with open(csvfile_path, 'a', newline='', encoding='utf-8') as csvfile:
                 writer = csv.writer(csvfile)
