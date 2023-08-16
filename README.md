@@ -15,5 +15,8 @@ MCD-YOLOv5 models will learn by example of molecular clumps. You can use `Image.
 ##### 1.2 Create Labels
 Once you have collected examples of molecular clumps, you will need to annotate the objects of interest to create a ground truth for MCD-YOLOv5 to learn from. You can use `Xml.py` to get annotations from the clump parameter table.
 ##### 1.3 Prepare Dataset for YOLOv5
-#### 2. Select a Model
-#### 3. Train
+Once you have collected examples and created labels, you should put them in the folders named JPEGImages and Annotations in VOCdevkit, respectively. Then, you should use `xml2txt.py` and `split_data.py` to divide the dataset into a training set, a validation set, and a test set.
+#### 2. Train
+You can use `train.py` to train the MCD-YOLOv5 on your data.
+#### 3. Detect
+Once the training is over, you can use the `detect.py` to detect the new examples.
