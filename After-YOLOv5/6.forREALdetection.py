@@ -12,13 +12,11 @@ with open(txtfile1_path) as fp1:
             del example[:]
             a = line1.split('\t')
             b = line2.split('\n')[0].split(' ')
-
             c1 = int(a[1]) + int(b[1])
             c2 = int(a[2]) + int(b[2])
             c3 = int(a[1]) + int(b[3])
             c4 = int(a[2]) + int(b[4])
             c0 = a[0].split('.txt')[0]
-
             example.append(c0)
             example.append(c1)
             example.append(c2)
