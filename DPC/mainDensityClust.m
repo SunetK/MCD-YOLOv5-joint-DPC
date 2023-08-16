@@ -1,15 +1,8 @@
 clear
 close all;
 clc;
-%% Load Data Set
-% NOTE that the usage of some *very useful* functions: e.g., squareform, pdist2 ...
-% fileName = 'demoData.mat';
-% load(fileName); % NOTE that the 'demoData.mat' file includes a matrix <X> with *NE* elements and *2* dim,
-                        % NE is the number of elements of a data set
-%aa=load('data_f1\ppt\2.18\centroid_0031.txt');
-% data = fitsread('data_f1\ppt\f1_out_000_100.fits');
-%z = load('data_f1\ppt\2.18\velo_0031.txt');
-aa = load('data_f1\ppt\3D_data\G100\G100_3D_0031_CenStrong.txt');
+
+aa = load('3D_data\G100\G100_3D_0031_CenStrong.txt');
 xy = [aa(:,1) , aa(:,2) , aa(:,3) ];
 X = xy;
 xy = floor(xy);
