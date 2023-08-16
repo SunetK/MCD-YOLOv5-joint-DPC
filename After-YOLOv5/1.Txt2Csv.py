@@ -10,11 +10,11 @@ txt_names = os.listdir(txtfile_path)
 txt_names.sort(key=lambda x:int(x.split('.')[0].split('_')[-1]))
 for txt_name in txt_names:
     txt_path = os.path.join(txtfile_path, txt_name)
-    # print(txt_path)
+
     for line in open(txt_path):
         del example[:]
         a = line.split(' ')
-        b1 = int(a[2])  # 这是选取需要读取的位数
+        b1 = int(a[2]) 
         b2 = int(a[3])
         b3 = int(a[4])
         b4 = int(a[5])
@@ -23,7 +23,7 @@ for txt_name in txt_names:
         example.append(b2)
         example.append(b3)
         example.append(b4)
-    # 将列表中个数据写入CSV文件
+
         with open(csvfile_path, 'a', newline='', encoding='utf-8') as csvfile:
             writer = csv.writer(csvfile)
             writer.writerow(example)
