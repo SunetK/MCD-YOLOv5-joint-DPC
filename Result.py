@@ -1,9 +1,9 @@
 import csv
 import pandas as pd
 
-csvfile_path = 'G100/0089_G100.csv'
-txtfile1_path = 'G100/real_G100_0089.txt'
-txtfile2_path = 'G100/0089_G100.txt'
+csvfile_path = 'G100/0099_G100.csv'
+txtfile1_path = 'G100/real_G100_0099.txt'
+txtfile2_path = 'G100/0099_G100.txt'
 
 example = []
 
@@ -32,5 +32,5 @@ with open(txtfile1_path) as fp1:
                 writer.writerow(example)
 
 
-df = pd.read_csv('G100/0089_G100.csv', header=None, names=['Velo', 'Xmin', 'Ymin', 'Xmax', 'Ymax', 'belongsto'])
-df.to_csv('G100/0089_G100.csv', index=False)
+df = pd.read_csv('G100/0099_G100.csv', header=None, names=['Velo', 'Xmin', 'Ymin', 'Xmax', 'Ymax', 'belongsto'])
+df.to_csv('G100/0099_G100.csv', index=False)
