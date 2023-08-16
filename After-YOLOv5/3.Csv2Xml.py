@@ -8,7 +8,7 @@ def prettyXml(element, indent, newline, level = 0):
         else:
             element.text = newline + indent * (level + 1) + element.text.strip() + newline + indent * (level + 1)
 
-    temp = list(element) # 将elemnt转成list
+    temp = list(element) 
     for subelement in temp:
         if temp.index(subelement) < (len(temp) - 1):
             subelement.tail = newline + indent * (level + 1)
@@ -16,40 +16,32 @@ def prettyXml(element, indent, newline, level = 0):
             subelement.tail = newline + indent * level
         prettyXml(subelement, indent, newline, level = level + 1)
 
-
 def nff(_list):
     for i in range(len(_list)):
         if int(_list[i]) < 0:
             _list[i] = 0
-
 
 def gen_maxin_data(name):
     import pandas as pd
     import re
     path = name
     data = pd.read_csv(path)
-
     Name = list(data['name'])
     Xmin = list(data['Xmin'])
     Ymin = list(data['Ymin'])
     Xmax = list(data['Xmax'])
     Ymax = list(data['Ymax'])
-
     return (Name, Xmin, Ymin, Xmax, Ymax)
-
 
 def write_xml_(data):
     import xml.etree.ElementTree as ET
     from xml.etree.ElementTree import Element
-
     for j in range(len(data[0])): # 行
-
         path = 'Mark_core/G100/G100_0099/'
         if not os.path.exists(path):
             os.makedirs(path)
 
         write_name = f"Mark_core/G100/G100_0099/{data[0][j].split('.txt')[0]}.xml"
-
         if os.path.isfile(write_name):
             tree =ET.parse(write_name)
             root = tree.getroot()
@@ -76,7 +68,7 @@ def write_xml_(data):
         xmax.text = str(data[3][j])
         ymax = SubElement(bndbox, 'ymax')
         ymax.text = str(data[4][j])
-        prettyXml(root, '\t', '\n')  # 执行美化方法
+        prettyXml(root, '\t', '\n')
 
         tree.write(write_name, encoding='utf-8')
 
